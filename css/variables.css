@@ -1,0 +1,23 @@
+:root {
+    --highlight-color: #ec383e;
+
+    --primary-color: #000;
+    --secondary-color: #1e1e1e;
+    --tertiary-color: #d0d0d0;
+
+    --dark-color: #353535;
+    --light-color: #fff;
+
+    --menu-color: #696969;
+
+    --section-color: #f3f3f3;
+
+    --border-color: #dfdfdf;
+    --border-color-dark: #484848;
+
+    --border-radius: 0px;
+
+    --font: "Poppins", sans-serif;
+    --font2: "Poppins", sans-serif;
+}
+  

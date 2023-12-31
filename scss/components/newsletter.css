@@ -1,0 +1,28 @@
+.newsletter {
+  padding: 4rem 0;
+}
+.newsletter-form {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.newsletter-form input {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  font-size: 15px;
+  font-weight: 600;
+  height: 51px;
+  width: 420px;
+  padding: 0.5rem 1.5rem;
+}
+.newsletter-form button {
+  border: 1px solid var(--light-color);
+  height: 51px;
+  padding: 0.5rem 1.5rem;
+  color: var(--light-color);
+  font-size: 15px;
+  font-weight: 600;
+}/*# sourceMappingURL=newsletter.css.map */

@@ -1,0 +1,38 @@
+/* 
+Theme name: Detskeboty
+Author: Jan Kolařík
+Author's url: www.jan-kolarik.cz
+*/
+
+// Defaults
+@import "defaults/variables";
+@import "defaults/resets";
+@import "defaults/functions";
+
+// Page Components
+@import "components/newsletter";
+@import "components/section";
+@import "components/reviews";
+@import "components/counters";
+@import "components/button";
+@import "components/manufacturers";
+@import "components/products";
+@import "components/news";
+@import "components/benefits";
+@import "components/homepage-banner";
+@import "components/topmessage";
+@import "components/featuredProducts";
+
+// Pages
+@import "pages/page";
+
+// Layouts
+@import "layout/header";
+@import "layout/footer";
+
+@media (min-width: $xxl) {
+    .container-xxl-fluid {
+        width: 100%;
+        max-width: unset;
+    }
+}

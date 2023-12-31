@@ -1,0 +1,23 @@
+.button {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.button-link {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.button-link svg, .button-link path {
+  transition-duration: 0.1s;
+}
+.button-link:hover {
+  text-decoration: none;
+}
+.button-link:hover svg, .button-link:hover path {
+  fill: var(--highlight-color);
+}/*# sourceMappingURL=button.css.map */

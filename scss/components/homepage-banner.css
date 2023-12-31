@@ -1,0 +1,6 @@
+.homepage-banner-item img {
+  height: 499px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=homepage-banner.css.map */

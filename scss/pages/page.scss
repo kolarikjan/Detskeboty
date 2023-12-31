@@ -1,0 +1,6 @@
+.page {
+    padding: 2.5rem 0 0;
+    & > *:first-child {
+        padding-top: 0;
+    }
+}

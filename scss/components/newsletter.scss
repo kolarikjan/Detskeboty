@@ -1,0 +1,40 @@
+.newsletter {
+    padding: 4rem 0;
+    @media (max-width: $md) {
+        padding: 2.5rem 0;
+    }
+    &-form {
+        width: fit-content;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .75rem .5rem;
+        @media (max-width: $sm) {
+            padding: 0 .75rem;
+        }
+        input {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            font-size: 15px;
+            font-weight: 600;
+            height: 51px;
+            width: 420px;
+            padding: .5rem 1.5rem;
+            @media (max-width: $md) {
+                width: auto;
+            }
+            @media (max-width: $sm) {
+                width: 100%;
+            }
+        }
+        button {
+            border: 1px solid var(--light-color);
+            height: 51px;
+            padding: .5rem 1.5rem;
+            color: var(--light-color);
+            font-size: 15px;
+            font-weight: 600;
+        }
+    }
+}
