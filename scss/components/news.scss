@@ -1,10 +1,22 @@
 .news {
+    .container {
+        @media (max-width: $sm) {
+            padding: 0;
+        }
+    }
     &-outerbox {
         background-color: var(--section-color);
         padding: 2rem;
         position: relative;
+        @media (max-width: $sm) {
+            padding: 2rem 2rem 2.5rem;
+            margin-bottom: 1rem;
+        }
     }
     &-item {
+        @media (max-width: $md) {
+            text-align: center;
+        }
         &-date {
             display: block;
             background-color: var(--dark-color);
@@ -14,13 +26,45 @@
             font-weight: 400;
             width: fit-content;
             padding: .2rem .5rem;
+            @media (max-width: $md) {
+                margin: 0 auto 1rem;
+            }
         }
         &-title {
+            position: relative;
             display: block;
             font-size: 15px;
             color: var(--secondary-color);
             font-weight: 700;
             margin-bottom: .25rem;
+            svg {
+                display: inline-block;
+                opacity: 0;
+                visibility: hidden;
+                position: relative;
+                margin-top: -3px;
+                right: .25rem;
+                z-index: -1;
+                transition-duration: 0.1s;
+                @media (max-width: $md) {
+                    display: none;
+                }
+                path {
+                    transition-duration: 0.1s;
+                    fill: var(--secondary-color);
+                }
+            }
+            &:hover {
+                text-decoration: none;
+                svg {
+                    opacity: 1;
+                    visibility: visible;
+                    right: 0;
+                    &, path {
+                        fill: var(--highlight-color);
+                    }
+                }
+            }
         }
         &-description {
             font-size: 13px;
@@ -33,6 +77,15 @@
     &-owl.owl-carousel {
         position: unset;
         .owl-nav {
+            @media (max-width: $sm) {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                @include flexCenter();
+                gap: .5rem;
+                transform: translateY(50%);
+            }
             button {
                 position: absolute;
                 top: 50%;
@@ -58,6 +111,14 @@
                 &.owl-next {
                     right: 0;
                     transform: translate(50%,-50%);
+                }
+                @media (max-width: $sm) {
+                    position: unset;
+                    transform: none !important;
+                    &.disabled {
+                        opacity: .65;
+                        visibility: visible;
+                    }
                 }
             }
         }     

@@ -24,9 +24,10 @@ Author's url: www.jan-kolarik.cz
 @import "components/featuredProducts";
 
 // Pages
-@import "pages/page";
+@import "pages/homepage";
 
 // Layouts
+@import "layout/page";
 @import "layout/header";
 @import "layout/footer";
 

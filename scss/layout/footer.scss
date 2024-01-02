@@ -93,7 +93,7 @@
             &-item {
                 display: flex;
                 align-items: center;
-                gap: .75rem;
+                gap: .25rem .75rem;
                 @media (max-width: $md) {
                     flex-direction: column;
                 }
@@ -106,7 +106,7 @@
             }
         }
         &-logos {
-            gap: 1.5rem;
+            gap: .75rem 1.5rem;
             @media (max-width: $md) {
                 width: 100%;
                 justify-content: center;
@@ -137,10 +137,18 @@
             border-radius: 50%;
             width: 42px;
             aspect-ratio: 1/1;
-            padding: .65rem;
+            padding: .5rem;
             @include flexCenter();
-            svg, path {
-                fill: var(--tertiary-color);
+            transition-duration: 0.25s;
+            &:hover {
+                background-color: var(--border-color-dark);
+            }
+            svg {
+                width: 18px;
+                object-fit: scale-down;            
+                path {
+                    fill: var(--tertiary-color);
+                }
             }
         }
     }

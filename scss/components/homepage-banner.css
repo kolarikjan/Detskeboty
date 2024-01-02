@@ -1,5 +1,6 @@
 .homepage-banner-item img {
-  height: 499px;
+  max-height: 505px;
+  aspect-ratio: 2.77/1;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;

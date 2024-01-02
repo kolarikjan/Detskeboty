@@ -9,12 +9,13 @@
         line-height: 19px;
         color: var(--primary-color);
         font-weight: 700;
-        svg, path {
+        transition-duration: 0.1s;
+        path {
             transition-duration: 0.1s;
         }
         &:hover {
             text-decoration: none;
-            svg, path {
+            path {
                 fill: var(--highlight-color);
             }
         }

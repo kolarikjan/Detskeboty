@@ -1,6 +1,57 @@
+const isScrolledIntoView = (el, fullyVisibleRequired = false) =>  {
+    const rect = el.getBoundingClientRect();
+    const elemTop = rect.top;
+    const elemBottom = rect.bottom;
+    let isVisible;
+    if (fullyVisibleRequired == false) {
+        isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+    } else {
+        isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+    }
+    return isVisible;
+}
+const numberAnimation = () => {
+    $('.counters-item-number span').each(function () {
+        if (isScrolledIntoView(this) && !$(this).hasClass("animated")) {
+            $(this).addClass("animated");
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+        
+            var animation = {
+                countNum: countTo
+            };
+        
+            $({ countNum: $this.text() }).animate(animation, {
+                duration: 2500,
+                step: function (now, fx) {
+                    $this.text(Math.floor(this.countNum).toLocaleString('en'));
+                    if (fx.pos > 0.5) {
+                        $(this).stop();
+                        $(this).animate(animation, {
+                            duration: 250,
+                            step: function () {
+                                $this.text(Math.floor(this.countNum).toLocaleString('en'));
+                            },
+                            complete: function () {
+                                $this.text(Math.floor(this.countNum).toLocaleString('en'));
+                            }
+                        });
+                    }
+                }
+            });
+        }
+    });
+};
+
 $(document).ready(function () {
 
     Fancybox.bind("[data-fancybox]", {});
+
+    document.querySelector('.navbar-toggler').addEventListener('click', function () {
+
+        document.querySelector('.navbar-toggler').classList.toggle('open');
+
+    });
 
     const owlHome = $('.homepage-banner-owl').owlCarousel({
         items:1,
@@ -26,35 +77,32 @@ $(document).ready(function () {
         responsive: {
             0: {
                 items: 1,
-                stagePadding: 25,
-                margin:16,
             },
             576: {
                 items: 1,
-                stagePadding: 75,
-                margin:40,
             },
             768: {
                 items: 2,
-                stagePadding: 50,
-                margin:40,
             },
             993: {
                 items: 3,
-                margin:40,
-                stagePadding: 50,
             },
             1200: {
                 items: 3,
             },
             1500: {
                 items: 4,
-            },
-            2500: {
-                items: 5
             }
         }
     });
 
+    numberAnimation();
+
+
 });
 
+$(window).scroll(function () { 
+
+    numberAnimation();
+
+});
