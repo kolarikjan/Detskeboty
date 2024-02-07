@@ -25,13 +25,13 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--link-color);
+  color: var(--highlight-color);
   transition-duration: 0.1s;
 }
 
 a:hover {
   text-decoration: underline;
-  color: var(--link-color);
+  color: var(--highlight-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -50,6 +50,7 @@ input, textarea, button, select {
   outline: none;
   box-shadow: none;
   border: none;
+  background: none;
 }
 
 .w-fit {
@@ -62,7 +63,6 @@ input, textarea, button, select {
   box-shadow: none !important;
   outline: none !important;
   margin: 0 !important;
-  padding: 0 !important;
 }
 
 .owl-carousel .owl-nav button {
@@ -75,6 +75,31 @@ input, textarea, button, select {
   font-weight: 600 !important;
 }
 
+.owl-stage {
+  display: flex !important;
+}
+
+.owl-stage .owl-item {
+  flex: 1 0 auto;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (min-width: 1475px) {
+  .container {
+    max-width: 1420px;
+  }
+}
+@media (min-width: 1501px) {
+  .container-xxl-fluid {
+    width: 100%;
+    max-width: unset;
+  }
+}
 /*
 .row .container {
   padding-right: 0.75rem;

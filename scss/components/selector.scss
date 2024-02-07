@@ -1,0 +1,65 @@
+.selector {
+    &-container {
+        border: 1px solid var(--border-color);
+    }
+    &-item {
+        position: relative;
+        padding: .5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 55px;
+        gap: 1rem;
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--border-color);
+        }
+        &-input {
+            input {
+                margin-right: 0 !important;
+            }
+        }
+        &-inner {
+            display: flex;
+            align-items: center;
+            gap: .25rem .75rem;
+            cursor: pointer;
+        }
+        &-image {
+            flex-shrink: 0;
+            img {
+                width: 100px;
+                max-height: 35px;
+                object-fit: scale-down;
+                @media (max-width: $md) {
+                    display: none;
+                }
+            }
+        }
+        &-title {
+            p {
+                font-size: 14px;
+                line-height: 22px;
+                color: var(--secondary-color);
+                font-weight: 500;
+                margin-bottom: 0;
+                span {
+                    font-weight: 700;
+                    display: inline-block;
+                    @media (max-width: $md) {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .popup-default {
+            flex-shrink: 0;
+            @include flexCenter();
+            & > button {
+                color: var(--border-color);
+                & > svg {
+                    width: 26px;
+                }
+            }
+        }
+    }
+}

@@ -52,11 +52,27 @@
     }
 }
 .page-output {
-    p, td, li {
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+    p, td, li,a {
         color: var(--primary-color);
         font-size: 13px;
         line-height: 25px;
         font-weight: 400;
+    }
+    b, strong {
+        font-weight: 600;
+    }
+    a {
+        color: var(--highlight-color);
+    }
+    h4 {
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--primary-color);
+        font-weight: 700;
+        margin-bottom: 1rem;
     }
     &-table {
         &-2col {

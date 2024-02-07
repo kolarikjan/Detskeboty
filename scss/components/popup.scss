@@ -1,0 +1,37 @@
+.popup {
+    &-default {
+        &-content {
+            display: none !important;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100svh;
+            @include flexCenter();
+            background-color: #353535bf;
+            &.active {
+                display: flex !important;
+            }
+            &-inner {
+                position: relative;
+                background-color: var(--light-color);
+                width: 600px;
+                padding: 3rem;
+                @media (max-width: $md) {
+                    width: 100%;
+                    padding: 3rem 1.5rem;
+                }
+            }
+        }
+        &-close {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.25rem;
+            transition: .1s;
+            &:hover {
+                color: var(--highlight-color);
+            }
+        }
+    }
+}

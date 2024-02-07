@@ -188,5 +188,8 @@
     }
     &-owl {
         position: relative !important;
+        @media (max-width: $sm) {
+            padding-bottom: 2rem;
+        }
     }
 }

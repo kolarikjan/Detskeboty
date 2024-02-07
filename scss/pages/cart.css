@@ -1,0 +1,76 @@
+.page-cart .cart-table-header {
+  font-size: 13px;
+  line-height: 23px;
+  color: var(--menu-color);
+  font-weight: 500;
+}
+.page-cart .cart-table-body {
+  margin-bottom: 0.75rem;
+}
+.page-cart .cart-table-footer {
+  background-color: var(--section-color);
+  padding: 1.5rem 3rem;
+  text-align: right;
+}
+.page-cart .cart-table-footer-small {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--menu-color);
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+.page-cart .cart-table-footer-large {
+  font-size: 17px;
+  line-height: 24px;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.page-cart .cart-table-footer-large span {
+  font-size: 24px;
+  font-weight: 700;
+}
+.page-cart .cart-table-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.75rem 0;
+}
+.page-cart .cart-table-col-image {
+  width: 10%;
+}
+.page-cart .cart-table-col-name {
+  width: 45%;
+}
+.page-cart .cart-table-col-name a, .page-cart .cart-table-col-name span {
+  display: block;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--secondary-color);
+}
+.page-cart .cart-table-col-name a {
+  font-weight: 600;
+}
+.page-cart .cart-table-col-name a:hover {
+  text-decoration: none;
+  color: var(--highlight-color);
+}
+.page-cart .cart-table-col-name span {
+  font-weight: 400;
+}
+.page-cart .cart-table-col-quantity {
+  width: 10%;
+}
+.page-cart .cart-table-col-availability {
+  width: 10%;
+}
+.page-cart .cart-table-col-price1 {
+  width: 10%;
+}
+.page-cart .cart-table-col-price2 {
+  width: 10%;
+}
+.page-cart .cart-table-col-remove {
+  width: 5%;
+}/*# sourceMappingURL=cart.css.map */

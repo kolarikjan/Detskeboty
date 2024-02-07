@@ -139,27 +139,35 @@ $(document).ready(function () {
         loop:false,
         rewind:false,
         navText:['<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 15" width="8" height="15"><g id="Top"><path id="-e-arrow-slider" class="s0" d="m0.1 13.5l7.1-7 0.7 0.7-7.1 7zm7.8-6.3l-7.1-7.1-0.7 0.7 7.1 7.1z"/></g></svg>', '<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 15" width="8" height="15"><g id="Top"><path id="-e-arrow-slider" class="s0" d="m0.1 13.5l7.1-7 0.7 0.7-7.1 7zm7.8-6.3l-7.1-7.1-0.7 0.7 7.1 7.1z"/></g></svg>'],
-        margin:1,
+        margin:16,
         nav: true,
         dots: false,
+        animateOut: 'slideOutUp',
+        animateIn: 'slideInUp',
         responsive: {
             0: {
                 items: 2,
+                margin:8,
             },
-            768: {
+            350: {
                 items: 3,
+                margin:8,
+            },
+            576: {
+                margin:16,
             },
             1200: {
-                items: 3,
+                touchDrag: false,
+                mouseDrag: false,
             },
         }
     });
 
     numberAnimation();
 
-    $(".page-product-main-button").click(function (e) { 
+    $(".page-product-main-button a").click(function (e) { 
         e.preventDefault();
-        const targetID = $(this).attr("data-target");
+        const targetID = $(this).parent().attr("data-target");
         $(".page-product-main-button, .page-product-main-item").removeClass("active");
         $(".page-product-main-button[data-target="+targetID+"]").addClass("active");
         $(".page-product-main-item[data-id="+targetID+"]").addClass("active");
@@ -168,6 +176,25 @@ $(document).ready(function () {
             $(".page-product-main-header-dropdown .filters-item-header").removeClass("activated");
             document.querySelector(".page-product-main-header-dropdown .filters-item-content").style.maxHeight = null;
         }
+    });
+
+    $(".productInformation-gift-item").click(function (e) { 
+        e.preventDefault();
+        $(".productInformation-gift-item").removeClass("selected");
+        $(this).addClass("selected");
+    });
+
+    $('.filters-item-changingHeader input[type="radio"]').on('change', function(e) {
+        $(".filters-item-header-state-default").removeClass("active");
+        $(".filters-item-header-state-selected").addClass("active");
+        $(".filters-item-header-state-selected span").html($(this).val());
+        $(".filters-item-changingHeader .filters-item-header").removeClass("activated");
+        document.querySelector(".filters-item-changingHeader .filters-item-content").style.maxHeight = null;
+    });
+
+    $(".popup-default-activator, .popup-default-close").click(function (e) { 
+        e.preventDefault();
+        $(this).closest(".popup-default").children(".popup-default-content").toggleClass("active");
     });
 
 });

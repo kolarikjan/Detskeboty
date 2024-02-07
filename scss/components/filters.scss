@@ -53,9 +53,17 @@
             font-weight: 700;
             font-family: "Poppins";
             width: 100%;
-            span {
+            & > span {
                 padding-left: .25rem;
                 color: var(--highlight-color);
+            }
+            &-state {
+                & > div {
+                    display: none;
+                    &.active {
+                        display: block;
+                    }
+                }
             }
         }
         &-hidetext {
@@ -94,6 +102,17 @@
                     }
                     &:not(:last-of-type) {
                         margin-bottom: .5rem;
+                    }
+                }
+                &-sizing {
+                    label {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        &:not(:last-child) {
+                            margin-bottom: .75rem;
+                        }
                     }
                 }
                 &.direction-row {

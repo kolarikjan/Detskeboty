@@ -26,12 +26,15 @@ Author's url: www.jan-kolarik.cz
 @import "components/filters";
 @import "components/form";
 @import "components/categories";
+@import "components/popup";
+@import "components/selector";
 
 // Pages
 @import "pages/homepage";
 @import "pages/subpage";
 @import "pages/catalog";
 @import "pages/product";
+@import "pages/cart";
 
 // Layouts
 @import "layout/page";
@@ -43,9 +46,9 @@ Author's url: www.jan-kolarik.cz
     filter: opacity(0.5);
     color: var(--light-color);
 }
-@media (min-width: $xxl) {
-    .container-xxl-fluid {
-        width: 100%;
-        max-width: unset;
-    }
+.text-red {
+    color: var(--highlight-color);
+}
+.text-green {
+    color: var(--ok-color);
 }

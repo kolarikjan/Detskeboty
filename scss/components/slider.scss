@@ -1,6 +1,6 @@
 .owl-carousel {
     position: unset;
-    .owl-nav {
+    &:not(.owl-default-nav) .owl-nav {
         @media (max-width: $sm) {
             position: absolute;
             bottom: 0;

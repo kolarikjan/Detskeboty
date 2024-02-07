@@ -37,6 +37,75 @@
             }
         }
     }
+    &-default {
+        padding: .75rem 1.5rem;
+        font-size: 14px;
+        font-weight: 600;
+        position: relative;
+        transition: color 0.25s ease-in-out;
+        border: 2px solid var(--dark-color);
+        background-color: var(--dark-color);
+        color: var(--light-color);
+        span {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+        svg {
+            transition: fill 0.25s ease-in-out;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 100%;
+            height: 100%;
+            width: 0;
+            z-index: 0;
+            transition: width 0.25s ease-in-out;
+            background-color: var(--light-color);
+        }
+        &:hover {
+            color: var(--dark-color);
+            text-decoration: none;
+            &::after {
+                left: 0;
+                width: 100%;
+            }
+        }
+        &-red {
+            background-color: var(--highlight-color);
+            color: var(--light-color);
+            border-color: var(--highlight-color);
+            svg {
+                fill: var(--light-color);
+            }
+            &::after {
+                background-color: var(--light-color);
+            }   
+            &:hover {
+                svg {
+                    fill: var(--highlight-color);
+                }   
+                color: var(--highlight-color);
+            }
+        }
+        &-grey {
+            background-color: var(--section-color);
+            color: var(--dark-color);
+            border-color: var(--section-color);
+            svg {
+                fill: var(--dark-color);
+            }
+            &::after {
+                background-color: var(--light-color);
+            }   
+        }
+    }
     &-reset {
         font-size: 13px;
         line-height: 22px;

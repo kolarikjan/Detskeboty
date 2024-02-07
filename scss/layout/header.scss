@@ -128,6 +128,9 @@
         }
         & > ul {
             gap: .5rem 1.5rem;
+            @media (max-width: 1550px) and (min-width: 1500px) {
+                gap: .5rem 1rem;
+            }
             @include media("xxl") {
                 row-gap: .5rem;
             }
