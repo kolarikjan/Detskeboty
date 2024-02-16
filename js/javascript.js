@@ -178,6 +178,21 @@ $(document).ready(function () {
         }
     });
 
+    
+    $(".largeFilters-menu a").click(function (e) { 
+        e.preventDefault();
+        const targetID = $(this).parent().attr("data-target");
+        $(".largeFilters-menu li, .largeFilters-main-item").removeClass("active");
+        $(".largeFilters-menu li[data-target="+targetID+"]").addClass("active");
+        $(".largeFilters-main-item[data-id="+targetID+"]").addClass("active");
+    });
+
+    $(".largeFilters-bottom-reset").click(function (e) { 
+        e.preventDefault();
+        $('.largeFilters')[0].reset();
+        $(this).closest(".popup-default").children(".popup-default-content").toggleClass("active");
+    });
+
     $(".productInformation-gift-item").click(function (e) { 
         e.preventDefault();
         $(".productInformation-gift-item").removeClass("selected");
@@ -195,6 +210,35 @@ $(document).ready(function () {
     $(".popup-default-activator, .popup-default-close").click(function (e) { 
         e.preventDefault();
         $(this).closest(".popup-default").children(".popup-default-content").toggleClass("active");
+    });
+
+    $('.form-section-dropdown-activator input[type="checkbox"]').on('change', function(e) {
+        e.preventDefault();
+        if ($(this).is(':checked')) {
+            $(this).closest(".form-section-dropdown").addClass("active");
+        } else {
+            $(this).closest(".form-section-dropdown").removeClass("active");
+        }
+    });
+    
+    $('.filters-item-catalog input[type="checkbox"]').on('change', function(e) {
+        e.preventDefault();
+        const targetEl = "#"+ $(this).closest("form").attr("data-targetEl");
+        const currentCount = $(targetEl).html();
+        console.log(targetEl);
+        if ($(this).is(':checked')) {
+            if (currentCount == "") {
+                $(targetEl).html("1");
+            } else {
+                $(targetEl).html(parseInt(currentCount)+1);
+            }
+        } else {
+            if (currentCount <= 1) {
+                $(targetEl).html("");
+            } else {
+                $(targetEl).html(parseInt(currentCount)-1);
+            }
+        }
     });
 
 });

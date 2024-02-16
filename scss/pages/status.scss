@@ -1,0 +1,43 @@
+.page-status {
+    &-header {
+        svg, img {
+            margin: 0 auto;
+            width: fit-content;
+            max-height: 100px;
+        }
+        margin-bottom: 1rem;
+    }
+    &-table {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: var(--section-color);
+        padding: 2rem;
+        margin-top: 2.5rem;
+        @media (max-width: $md) {
+            margin-top: 2rem;
+            padding: 1.5rem;
+        }
+        p {
+            margin-bottom: 0;
+        }
+        &-iconbox {
+            display: flex;
+            align-items: center;
+            &:not(:last-child) {
+                margin-bottom: .5rem;
+            }
+            div {
+                flex-shrink: 0;
+                border-right: 1px solid var(--secondary-color);
+                margin-right: .75rem;
+                padding: .25rem .75rem .25rem 0;
+                svg, img {
+                    width: 21px;
+                    height: 21px;
+                    object-fit: scale-down;
+                    fill: var(--secondary-color);
+                }
+            }
+        }
+    }
+}

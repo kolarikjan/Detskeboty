@@ -55,21 +55,76 @@
     & > *:last-child {
         margin-bottom: 0;
     }
-    p, td, li,a {
+    p, td, li,a:not(.button) {
         color: var(--primary-color);
-        font-size: 13px;
-        line-height: 25px;
+        font-size: 14px;
+        line-height: 24px;
         font-weight: 400;
+    }
+    ol {
+        padding-left: 1.5rem;
+        li::marker {
+            color: var(--highlight-color);
+            font-weight: 600;
+        }
+    }
+    table {
+        tr {
+            border-bottom: 1px solid var(--border-color);
+            &:first-child td {
+                color: var(--primary-color);
+                font-weight: 700;
+            }
+            td {
+                padding: .5rem 2.25rem .5rem 0;
+                min-width: 120px;
+                @media (max-width: $md) {
+                    padding: .5rem 1.5rem .5rem 0;
+                }
+            }
+        }
+    }
+    ul {
+        padding-left: 1rem;
+        li {
+            padding-inline-start: 0.5rem;
+            &::marker {
+                content: "-";
+                color: var(--highlight-color);
+                font-weight: 700;
+            }
+        }
     }
     b, strong {
         font-weight: 600;
     }
-    a {
+    a:not(.button) {
         color: var(--highlight-color);
+    }
+    h1 {
+        font-size: 32px;
+        line-height: 40px;
+        color: var(--primary-color);
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    h2 {
+        font-size: 26px;
+        line-height: 34px;
+        color: var(--primary-color);
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    h3 {
+        font-size: 22px;
+        line-height: 30px;
+        color: var(--primary-color);
+        font-weight: 700;
+        margin-bottom: 1rem;
     }
     h4 {
         font-size: 18px;
-        line-height: 24px;
+        line-height: 26px;
         color: var(--primary-color);
         font-weight: 700;
         margin-bottom: 1rem;

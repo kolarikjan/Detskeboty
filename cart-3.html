@@ -606,10 +606,10 @@
                     <div class="container">
                         <div class="section-content">
                             <div class="form-large-inner">
-                                <div class="row">
-                                    <div class="col-12 col-lg-6 form-large-col">
+                                <div class="form-large-row">
+                                    <div class="form-large-col">
                                         <div class="form-large-col-header">
-                                            <p><span class="text-red">*</span> Údaje označené hvězdičkou jsou povinné</p>
+                                            <p><b class="text-red">*</b> Údaje označené hvězdičkou jsou povinné</p>
                                         </div>
                                         <div class="form-section">
                                             <label for="name" class="form-inputbox form-inputbox-row">
@@ -678,86 +678,147 @@
                                             </label>
                                         </div>
                                         <div class="form-section">
-                                            <div class="form-section-activator">
-                                                <label for="address2">
-                                                    <input type="checkbox" name="address2" id="address2">
-                                                    Dodací adresa se liší od adresy
-                                                </label>
+                                            <div class="form-section-dropdown">
+                                                <div class="form-section-dropdown-activator">
+                                                    <div class="form-inputbox form-inputbox-row">
+                                                        <div class="form-inputbox-row-left"></div>
+                                                        <div class="form-inputbox-row-right">
+                                                            <label for="address2">
+                                                                <input type="checkbox" name="address2" id="address2">
+                                                                Dodací adresa se liší od adresy
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-section-dropdown-content">
+                                                    <label for="name" class="form-inputbox form-inputbox-row">
+                                                        <div class="form-inputbox-row-left">
+                                                            <span class="required">Ulice, č.p.</span>
+                                                        </div>
+                                                        <div class="form-inputbox-row-right">
+                                                            <input type="text" id="name">
+                                                        </div>
+                                                    </label>
+                                                    <label for="name" class="form-inputbox form-inputbox-row">
+                                                        <div class="form-inputbox-row-left">
+                                                            <span class="required">PSČ</span>
+                                                        </div>
+                                                        <div class="form-inputbox-row-right">
+                                                            <input type="text" id="name">
+                                                        </div>
+                                                    </label>
+                                                    <label for="name" class="form-inputbox form-inputbox-row">
+                                                        <div class="form-inputbox-row-left">
+                                                            <span class="required">Město, obec</span>
+                                                        </div>
+                                                        <div class="form-inputbox-row-right">
+                                                            <input type="text" id="name">
+                                                        </div>
+                                                    </label>
+                                                </div>
                                             </div>
-                                            <div class="form-section-content">
-                                                <label for="name" class="form-inputbox form-inputbox-row">
-                                                    <div class="form-inputbox-row-left">
-                                                        <span class="required">Ulice, č.p.</span>
+                                            <div class="form-section-dropdown">
+                                                <div class="form-section-dropdown-activator">
+                                                    <div class="form-inputbox form-inputbox-row">
+                                                        <div class="form-inputbox-row-left"></div>
+                                                        <div class="form-inputbox-row-right">
+                                                            <label for="company">
+                                                                <input type="checkbox" name="company" id="company">
+                                                                Nákup na firmu
+                                                            </label>
+                                                        </div>
                                                     </div>
-                                                    <div class="form-inputbox-row-right">
-                                                        <input type="text" id="name">
+                                                </div>
+                                                <div class="form-section-dropdown-content">
+                                                    <label for="name" class="form-inputbox form-inputbox-row">
+                                                        <div class="form-inputbox-row-left">
+                                                            <span class="required">IČO</span>
+                                                        </div>
+                                                        <div class="form-inputbox-row-right">
+                                                            <input type="text" id="name">
+                                                        </div>
+                                                    </label>
+                                                    <label for="name" class="form-inputbox form-inputbox-row">
+                                                        <div class="form-inputbox-row-left">
+                                                            <span class="required">DIČ</span>
+                                                        </div>
+                                                        <div class="form-inputbox-row-right">
+                                                            <input type="text" id="name">
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-section-dropdown d-md-none">
+                                                <div class="form-section-dropdown-activator">
+                                                    <div class="form-inputbox form-inputbox-row">
+                                                        <div class="form-inputbox-row-left"></div>
+                                                        <div class="form-inputbox-row-right">
+                                                            <label for="account">
+                                                                <input type="checkbox" name="account" id="account">
+                                                                Vytvořit zákaznický účet
+                                                            </label>
+                                                        </div>
                                                     </div>
-                                                </label>
-                                                <label for="name" class="form-inputbox form-inputbox-row">
-                                                    <div class="form-inputbox-row-left">
-                                                        <span class="required">PSČ</span>
-                                                    </div>
-                                                    <div class="form-inputbox-row-right">
-                                                        <input type="text" id="name">
-                                                    </div>
-                                                </label>
-                                                <label for="name" class="form-inputbox form-inputbox-row">
-                                                    <div class="form-inputbox-row-left">
-                                                        <span class="required">Město, obec</span>
-                                                    </div>
-                                                    <div class="form-inputbox-row-right">
-                                                        <input type="text" id="name">
-                                                    </div>
-                                                </label>
+                                                </div>
+                                                <div class="form-section-dropdown-content">
+                                                    <label for="email2" class="form-inputbox form-inputbox-row">
+                                                        <div class="form-inputbox-row-left">
+                                                            <span class="">E-mail</span>
+                                                        </div>
+                                                        <div class="form-inputbox-row-right">
+                                                            <input type="text" id="email2">
+                                                        </div>
+                                                    </label>
+                                                    <label for="password" class="form-inputbox form-inputbox-row">
+                                                        <div class="form-inputbox-row-left">
+                                                            <span class="">Heslo</span>
+                                                        </div>
+                                                        <div class="form-inputbox-row-right">
+                                                            <input type="password" id="password">
+                                                        </div>
+                                                    </label>
+                                                    <label for="password2" class="form-inputbox form-inputbox-row">
+                                                        <div class="form-inputbox-row-left">
+                                                            <span class="">Heslo znovu</span>
+                                                        </div>
+                                                        <div class="form-inputbox-row-right">
+                                                            <input type="password" id="password2">
+                                                        </div>
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-section">
-                                            <div class="form-section-activator">
-                                                <label for="company">
-                                                    <input type="checkbox" name="company" id="company">
-                                                    Nákup na firmu
-                                                </label>
-                                            </div>
-                                            <div class="form-section-content">
-                                                <label for="name" class="form-inputbox form-inputbox-row">
-                                                    <div class="form-inputbox-row-left">
-                                                        <span class="required">IČO</span>
-                                                    </div>
-                                                    <div class="form-inputbox-row-right">
-                                                        <input type="text" id="name">
-                                                    </div>
-                                                </label>
-                                                <label for="name" class="form-inputbox form-inputbox-row">
-                                                    <div class="form-inputbox-row-left">
-                                                        <span class="required">DIČ</span>
-                                                    </div>
-                                                    <div class="form-inputbox-row-right">
-                                                        <input type="text" id="name">
-                                                    </div>
-                                                </label>
+                                            <div class="form-inputbox-row">
+                                                <div class="form-inputbox-row-left"></div>
+                                                <div class="form-inputbox-row-right">
+                                                    <label for="note" class="form-inputbox form-inputbox-column">
+                                                        <span>Poznámka k objednávce</span>
+                                                        <textarea name="note" id="note"></textarea>
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-section">
-                                            <label for="note" class="form-inputbox form-inputbox-column">
-                                                <span>Poznámka k objednávce</span>
-                                                <textarea name="note" id="note"></textarea>
-                                            </label>
-                                        </div>
-                                        <div class="form-section">
-                                            <label for="newsletter">
-                                                <input type="checkbox" name="newsletter" id="newsletter">
-                                                Chci být informován o novinkách <span>(maximálně jeden mail za měsíc)</span>
-                                            </label>
+                                            <div class="form-inputbox-row">
+                                                <div class="form-inputbox-row-left"></div>
+                                                <div class="form-inputbox-row-right">
+                                                    <label for="newsletter" class="form-label-solid">
+                                                        <input type="checkbox" name="newsletter" id="newsletter">
+                                                        <div>Chci být informován o novinkách <span class="d-xl-block">(maximálně jeden mail za měsíc)</span></div>
+                                                    </label>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-lg-6 form-large-col">
+                                    <div class="form-large-col d-none d-md-block">
                                         <div class="form-large-col-header">
-                                            <p><span class="text-red">*</span> Údaje označené hvězdičkou jsou povinné</p>
+                                            <h3>Vytvoření zákaznického účtu</h3>
                                         </div>
                                         <div class="form-section">
                                             <label for="email2" class="form-inputbox form-inputbox-row">
                                                 <div class="form-inputbox-row-left">
-                                                    <span class="required">E-mail</span>
+                                                    <span class="">E-mail</span>
                                                 </div>
                                                 <div class="form-inputbox-row-right">
                                                     <input type="text" id="email2">
@@ -765,7 +826,7 @@
                                             </label>
                                             <label for="password" class="form-inputbox form-inputbox-row">
                                                 <div class="form-inputbox-row-left">
-                                                    <span class="required">Heslo</span>
+                                                    <span class="">Heslo</span>
                                                 </div>
                                                 <div class="form-inputbox-row-right">
                                                     <input type="password" id="password">
@@ -773,7 +834,7 @@
                                             </label>
                                             <label for="password2" class="form-inputbox form-inputbox-row">
                                                 <div class="form-inputbox-row-left">
-                                                    <span class="required">Heslo znovu</span>
+                                                    <span class="">Heslo znovu</span>
                                                 </div>
                                                 <div class="form-inputbox-row-right">
                                                     <input type="password" id="password2">

@@ -3,11 +3,13 @@
         position: relative !important;
     }
     &-item {
+        display: block;
+        width: 100%;
         position: relative;
+        aspect-ratio: 1/1.2;
         &-imagebox {
             overflow: hidden;
             img {
-                aspect-ratio: 1/1.15;
                 width: 100%;
                 object-fit: cover;
                 transition: .3s ease;

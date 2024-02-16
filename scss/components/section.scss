@@ -6,10 +6,12 @@
             margin-bottom: 1.75rem;
         }
         h2 {
+            line-height: 40px;
             font-size: 32px;
             font-weight: 700;
             margin-bottom: 0;
             @media (max-width: $md) {
+                line-height: 38px;
                 font-size: 30px;
             }
         }
@@ -45,9 +47,6 @@
         }
     }
     .page-subpage &-spacing {
-        &:first-child {
-            padding-top: 0 !important;
-        }
         &:last-child {
             padding-bottom: 0 !important;
         }

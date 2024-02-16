@@ -106,6 +106,9 @@
 .button-default-grey::after {
   background-color: var(--light-color);
 }
+.button-radius {
+  border-radius: 3px;
+}
 .button-reset {
   font-size: 13px;
   line-height: 22px;

@@ -28,6 +28,7 @@ Author's url: www.jan-kolarik.cz
 @import "components/categories";
 @import "components/popup";
 @import "components/selector";
+@import "components/largeFilters";
 
 // Pages
 @import "pages/homepage";
@@ -35,6 +36,7 @@ Author's url: www.jan-kolarik.cz
 @import "pages/catalog";
 @import "pages/product";
 @import "pages/cart";
+@import "pages/status";
 
 // Layouts
 @import "layout/page";

@@ -56,6 +56,14 @@
             & > span {
                 padding-left: .25rem;
                 color: var(--highlight-color);
+                &:not(:empty) {
+                    &::after {
+                        content: ")";
+                    }
+                    &::before {
+                        content: "(";
+                    }    
+                }
             }
             &-state {
                 & > div {

@@ -9,6 +9,7 @@
         position: relative;
     }
     &-item {
+        height: 100%;
         padding: 2rem;
         background-color: var(--section-color);
         @media (max-width: $sm) {

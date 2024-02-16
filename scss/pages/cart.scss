@@ -24,12 +24,19 @@
                     text-align: left;
                     padding: 1.5rem 2rem;
                 }
+                @media (max-width: $sm) {
+                    text-align: left;
+                    padding: 1.5rem;
+                }
                 &-small {
                     font-size: 14px;
                     line-height: 24px;
                     color: var(--menu-color);
                     font-weight: 400;
                     margin-bottom: .5rem;
+                    @media (max-width: $sm) {
+                        margin-bottom: .25rem;
+                    }
                 }
                 &-large {
                     font-size: 17px;
@@ -51,6 +58,7 @@
                 gap: .5rem 0;
                 border-bottom: 1px solid var(--border-color);
                 padding: .75rem 0;
+                justify-content: space-between;
                 @media (max-width: $lg) {
                     flex-wrap: wrap;
                     padding: 0 0 .75rem;
@@ -117,6 +125,12 @@
                     width: 10%;
                     @media (max-width: $lg) {
                         margin-bottom: .5rem;
+                    }
+                    span {
+                        font-size: 14px;
+                        line-height: 24px;
+                        color: var(--menu-color);
+                        font-weight: 400;
                     }
                     &-form {
                         border: 1px solid var(--border-color);
@@ -211,9 +225,6 @@
         }
         &-boxes {
             margin-top: 2.5rem;
-            @media (max-width: $md) {
-                margin-top: 3rem;
-            }
             &-row {
                 gap: 1rem 0;
             }
@@ -221,9 +232,15 @@
                 background-color: var(--section-color);
                 padding: 2rem;
                 height: 100%;
+                @media (max-width: $sm) {
+                    padding: 1.5rem;
+                }
                 &-header {
                     min-height: 70px;
                     margin-bottom: 1.5rem;
+                    @media (max-width: $sm) {
+                        margin-bottom: 1.25rem;
+                    }
                     h3 {
                         font-size: 15px;
                         line-height: 24px;
