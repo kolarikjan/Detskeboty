@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24" width="22" height="24">
+	<title>Main</title>
+	<style>
+		.s0 { fill: #000000 } 
+	</style>
+	<g id="Main">
+		<path id="-e-icon-filters" fill-rule="evenodd" class="s0" d="m22 5h-15v-2h15zm-22-5h6v8h-6zm2 6h2v-4h-2zm-2 5h13v-3h6v8h-6v-3h-13zm15 3h2v-4h-2zm7-1h-2v-2h2zm-22 6h5v-3h6v8h-6v-3h-5zm7 3h2v-4h-2zm15-1h-10v-2h10z"/>
+	</g>
+</svg>

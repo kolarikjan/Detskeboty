@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 8" width="14" height="8">
+	<title>Main</title>
+	<style>
+		.s0 { fill: #000000 } 
+	</style>
+	<g id="Main">
+		<path id="-e-arrow-dropdown" class="s0" d="m0.6 0.3l7.1 7.1-0.7 0.7-7.1-7.1zm6.4 7.8l7.1-7.1-0.7-0.7-7.1 7.1z"/>
+	</g>
+</svg>

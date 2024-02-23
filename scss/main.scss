@@ -18,19 +18,31 @@ Author's url: www.jan-kolarik.cz
 @import "components/manufacturers";
 @import "components/products";
 @import "components/news";
+@import "components/slider";
 @import "components/benefits";
 @import "components/homepage-banner";
 @import "components/topmessage";
 @import "components/featuredProducts";
+@import "components/filters";
+@import "components/form";
+@import "components/categories";
 
 // Pages
 @import "pages/homepage";
+@import "pages/subpage";
+@import "pages/catalog";
+@import "pages/product";
 
 // Layouts
 @import "layout/page";
 @import "layout/header";
 @import "layout/footer";
 
+::selection {
+    background-color: #e5787c;
+    filter: opacity(0.5);
+    color: var(--light-color);
+}
 @media (min-width: $xxl) {
     .container-xxl-fluid {
         width: 100%;

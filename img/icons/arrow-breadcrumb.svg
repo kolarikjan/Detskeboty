@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 10" width="6" height="10">
+	<title>Main</title>
+	<style>
+		.s0 { fill: #b5b5b5 } 
+	</style>
+	<g id="Main">
+		<path id="-e-arrow-breadcrumb" class="s0" d="m0.3 8.5l4.2-4.2 0.7 0.7-4.2 4.2zm4.2-2.8l-4.2-4.2 0.7-0.7 4.2 4.2z"/>
+	</g>
+</svg>

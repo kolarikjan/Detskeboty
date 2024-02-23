@@ -31,17 +31,11 @@
     &-item {
         background-color: var(--light-color);
         padding: 2rem;
-        @media (max-width: $md) {
-            text-align: center;
-        }
         &-stars {
             display: flex;
             align-items: flex-start;
             gap: .25rem;
             margin-bottom: 1rem;
-            @media (max-width: $md) {
-                justify-content: center;
-            }
             svg, path {
                 fill: #e7c520;
             }

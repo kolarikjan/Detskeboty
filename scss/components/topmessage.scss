@@ -2,8 +2,14 @@
     background-color: var(--section-color);
     padding: .75rem 0;
     position: relative;
+    min-height: 57px;
+    display: flex;
+    align-items: center;
     &-text {
         text-align: center;
+        @media (max-width: $md) {
+            text-align: left;
+        }
         p {
             font-size: 15px;
             line-height: 25px;
@@ -20,7 +26,11 @@
             @media (max-width: $md) {
                 display: block;
                 width: fit-content;
-                margin: 0 auto .25rem;
+                margin: 0 0 .25rem;
+            }
+            @media (max-width: $sm) {
+                font-size: 13px;
+                letter-spacing: .25px;
             }
         }
     }

@@ -21,18 +21,15 @@
             flex: 0 0 calc(50% - 1.25rem);
         }
         @media (max-width: $md) {
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
             flex: 1;
             gap: .75rem;
-            text-align: center;
         }
         &-imagebox {
             flex-shrink: 0;
             width: 3rem;
             @media (max-width: $md) {
                 width: auto;
+                margin-top: .5rem;
             }
             svg {
                 max-width: 25px;
