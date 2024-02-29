@@ -10,6 +10,9 @@
         @media (max-width: $md) {
             text-align: left;
         }
+        a {
+            text-decoration: none !important;
+        }
         p {
             font-size: 15px;
             line-height: 25px;

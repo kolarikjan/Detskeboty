@@ -106,10 +106,18 @@
         }
         &-price {
             &-default {
-                display: block;
+                display: inline-block;
                 font-size: 16px;
                 color: var(--highlight-color);
                 font-weight: 700;
+            }
+            &-old {
+                display: inline-block;
+                font-size: 13px;
+                color: var(--menu-color);
+                font-weight: 500;
+                text-decoration: line-through;
+                margin-left: 0.25rem;
             }
         }
         &:hover &-tags {

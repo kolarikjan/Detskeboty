@@ -55,7 +55,7 @@
     & > *:last-child {
         margin-bottom: 0;
     }
-    p, td, li,a:not(.button) {
+    &, p, td, li,a:not(.button) {
         color: var(--primary-color);
         font-size: 14px;
         line-height: 24px;
@@ -68,14 +68,18 @@
             font-weight: 600;
         }
     }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
     table {
         tr {
             border-bottom: 1px solid var(--border-color);
-            &:first-child td {
+            &:first-child td, th {
                 color: var(--primary-color);
                 font-weight: 700;
             }
-            td {
+            td, th{
                 padding: .5rem 2.25rem .5rem 0;
                 min-width: 120px;
                 @media (max-width: $md) {

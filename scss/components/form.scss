@@ -261,4 +261,15 @@
             }
         }
     }
+    &-loyalty {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        label {
+            color: var(--primary-color);
+            input[type="checkbox"] {
+                background-color: var(--light-color);
+            }
+        }
+    }
 }
