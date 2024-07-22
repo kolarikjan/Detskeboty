@@ -1,0 +1,16 @@
+.page-content-logout {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  color: var(--menu-color) !important;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.page-footer { /*
+@media (max-width: $md) {
+    margin-top: 1rem;
+}
+*/ }/*# sourceMappingURL=page.css.map */

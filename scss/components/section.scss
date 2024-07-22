@@ -47,7 +47,7 @@
         }
     }
     .page-subpage &-spacing {
-        &:last-child {
+        &:not(.pb-auto):last-child {
             padding-bottom: 0 !important;
         }
     }

@@ -1,0 +1,106 @@
+.orders {
+    &-row {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    &-item {
+        background-color: var(--section-color);
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.75rem;
+        @media (max-width: $sm) {
+            padding: 1.5rem;
+            gap: 1.5rem;
+        }
+        &-top {
+            &-title {
+                margin-bottom: 1.75rem;
+                @media (max-width: $sm) {
+                    margin-bottom: 1.5rem;
+                }
+            }
+            &-parameters {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+                &-item {
+                    background-color: var(--light-color);
+                    width: fit-content;
+                    display: flex;
+                    align-items: center;
+                    gap: .375rem;
+                    padding: .5rem 1.25rem;
+                    svg, img {
+                        flex-shrink: 0;
+                        width: 24px;
+                        aspect-ratio: 1/1;
+                        object-fit: scale-down;
+                    }
+                    p {
+                        font-size: 13px;
+                        line-height: 24px;
+                        color: var(--primary-color);
+                        font-weight: 500;
+                        margin-bottom: 0;
+                    }
+                }
+                @media (max-width: $sm) {
+                    gap: .5rem 1rem;
+                    &-item {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &-products {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1rem;
+            @media (max-width: $xxl) {
+                grid-template-columns: repeat(6, 1fr);
+            }
+            @media (max-width: $xl) {
+                grid-template-columns: repeat(5, 1fr);
+            }
+            @media (max-width: $lg) {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            @media (max-width: $md) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            @media (max-width: $sm) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            a {
+                @include flexCenter();
+                background-color: var(--light-color);
+                width: 100%;
+                aspect-ratio: 1/1;
+                padding: 1.5rem;
+                &:hover img {
+                    opacity: .85;
+                }
+                img {
+                    aspect-ratio: 1/1;
+                    object-fit: scale-down;
+                    transition: .15s;
+                }
+            }
+        }
+        &-buttons {
+            display: flex;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: .5rem 1rem;
+            @media (max-width: $md) {
+                flex-direction: column;
+                a, button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

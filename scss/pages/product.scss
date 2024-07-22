@@ -24,6 +24,71 @@
             @media (max-width: $md) {
                 margin-bottom: 2rem;
             }
+            &-set {
+                margin-right: 3rem;
+                @media (max-width: $xl) {
+                    margin-right: 0;
+                }
+                &-row {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 1.25rem 1rem;
+                    @media (max-width: $xxl) {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    @media (max-width: $xl) {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                    @media (max-width: $lg) {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    @media (max-width: 450px) {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                &-item {
+                    position: relative;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    &-top {
+                        border-radius: 3px;
+                        border: 1px solid var(--border-color);
+                        padding: 2rem;
+                        margin-bottom: 0.8rem;
+                        aspect-ratio: 1 / 1.2;
+                        @include flexCenter();
+                    }
+                    &-number {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: var(--highlight-color);
+                        color: var(--light-color);
+                        padding: .5rem;
+                        text-align: center;
+                        font-size: 28px;
+                        line-height: 36px;
+                        font-weight: 600;
+                        @include flexCenter();
+                        border-radius: 3px;
+                        width: 52px;
+                        aspect-ratio: 1/1;
+                    }
+                    &-text {
+                        h3 {
+                            @extend .products-item-title;
+                        }
+                        p {
+                            color: var(--primary-color);
+                            font-size: 13px;
+                            line-height: 23px;
+                            font-weight: 400; 
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
             &-slider {
                 flex-shrink: 0;
                 width: 156px;
@@ -51,6 +116,7 @@
                     img {
                         transform: rotate(-90deg);
                         aspect-ratio: 1/1;
+                        object-fit: scale-down;
                         @media (max-width: $xl) {
                             transform: none;
                         }
@@ -414,6 +480,7 @@
                     }
                 }
                 a {
+                    cursor: pointer;
                     display: block;
                     font-size: 14px;
                     line-height: 20px;
@@ -487,21 +554,25 @@
                 margin-right: 0;
                 margin-bottom: 2rem;
             }
-            p {
-                font-size: 13px;
-                line-height: 23px;
-                color: var(--secondary-color);
-                font-weight: 600;
-            }
         }
         &-categories {
             margin-bottom: 2rem;
             p {
-                font-size: 13px;
-                line-height: 25px;
+                font-size: 14px;
+                line-height: 24px;
                 color: var(--secondary-color);
                 font-weight: 600;
                 margin-bottom: 0;
+                a {
+                    color: var(--secondary-color);
+                    &:hover {
+                        text-decoration: none;
+                        color: var(--highlight-color);
+                    }
+                }
+                b, strong {
+                    font-weight: 600;
+                }
             }
         }
         &-item {

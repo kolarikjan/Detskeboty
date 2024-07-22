@@ -1,5 +1,5 @@
 .form {
-    label {
+    label, &-label-appearance {
         cursor: pointer;
         font-size: 14px;
         line-height: 22px;
@@ -41,6 +41,10 @@
         height: 20px;
         width: 20px;
         -webkit-appearance: none;
+        &.white {
+            background-color: var(--light-color);
+            border: 0;
+        }
         &:before {
             content: '';
             position: absolute;
@@ -113,10 +117,38 @@
             }
         }
     }
+    &-light {
+        input[type="text"], input[type="number"], input[type="email"], input[type="password"], textarea {
+            border-color: transparent;
+            background-color: transparent;
+        }
+    }
     &-dark {
         input[type="text"], input[type="number"], input[type="email"], input[type="password"], textarea {
             border-color: var(--dark-color);
             background-color: transparent;
+        }
+    }
+    &-inner {
+        &.background {
+            padding: 3rem;
+            @media (max-width: $md) {
+                padding: 2rem;
+            }
+            @media (max-width: $sm) {
+                padding: 2rem 1rem;
+            }
+            background-color: var(--section-color);
+        }
+    }
+    &-header {
+        margin-bottom: 1rem;
+        h3 {
+            font-size: 15px;
+            line-height: 22px;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 0;
         }
     }
     &-large {
@@ -134,13 +166,19 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2.5rem 3.5rem;
+            &-contactform {
+                gap: .75rem 3.5rem;
+                grid-template-columns: 1fr 1.75fr;
+            }
             @media (max-width: $xl) {
                 grid-template-columns: 1fr;
             }
         }
-        input[type="radio"], input[type="checkbox"] {
-            background-color: var(--light-color);
-            border: 0;
+        .form-section-dropdown {
+            input[type="radio"], input[type="checkbox"] {
+                background-color: var(--light-color);
+                border: 0;
+            }
         }
         input[type="text"], input[type="number"], input[type="email"], input[type="password"], textarea {
             border-radius: 3px;

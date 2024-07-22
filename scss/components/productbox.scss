@@ -1,0 +1,144 @@
+.productbox {
+    &-inner {
+        border-radius: 3px;
+        border: 1px solid var(--border-color);
+        padding: 1.5rem;
+        @media (max-width: $xl) {
+            padding: 2.5rem;
+        }
+        @media (max-width: $sm) {
+            padding: 1.5rem;
+        }
+    }
+    &-title {
+        display: block;
+        font-size: 22px;
+        line-height: 30px;
+        color: var(--primary-color) !important;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    &-description {
+        margin-bottom: 1rem;
+        p {
+            color: var(--primary-color);
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+    }
+    &-price {
+        span {
+            font-size: 16px;
+            color: var(--highlight-color);
+            font-weight: 700;
+        }
+    } 
+    &-top {
+        position: relative;
+        @include flexCenter();
+        height: 100%;
+        @media (max-width: $xl) {
+            justify-content: flex-start;
+            padding-bottom: 2rem;
+        }
+        @media (max-width: $md) {
+            padding-top: 1rem;
+        }
+        @media (max-width: $sm) {
+            padding-bottom: 1.5rem;
+        }
+    }
+    &-icons {
+        @extend .products-item-tags;
+        left: calc(-1.5rem - 1px);
+        top: calc(-1.5rem - 1px);
+        img {
+            object-fit: scale-down;
+            max-width: 50px;
+            max-height: 50px;
+        }
+        @media (max-width: $xl) and (min-width: $sm) {
+            left: calc(-2.5rem - 1px);
+            top: calc(-2.5rem - 1px);
+        }
+    }
+    &-badges {
+        @extend .products-item-badges;
+        top: -.75rem;
+        right: -.75rem;
+        & > img {
+            max-width: 55px;
+            margin: .75rem;
+            @media (max-width: $sm) {
+                max-width: 45px;
+                margin: .5rem;
+            }
+        }
+        @media (max-width: $xl) and (min-width: $sm) {
+            right: calc(-2.5rem - 1px);
+            top: calc(-2.5rem - 1px);
+        }
+        @media (max-width: $sm) {
+            right: calc(-1.5rem - 1px);
+            top: calc(-1.5rem - 1px);
+        }
+    }
+    &-imagebox {
+        img {
+            display: block;
+            width: 100%;
+            max-height: 350px;
+            object-fit: scale-down;
+            @media (max-width: $xl) {
+                max-height: 150px;
+                justify-content: flex-start;
+            }
+            @media (max-width: $md) {
+                max-height: 100px;
+            }
+        }
+    }
+    &-body {
+        padding: 1.5rem;
+        @media (max-width: $xl) {
+            padding: 0;
+        }
+    }
+    &-tags {
+        &-item {
+            &-bordered {
+                min-width: 60px;
+                text-align: center;
+                padding: 0.25rem 0.5rem;
+            }
+            &-red {
+                @extend .products-item-tags-colored-red;
+            }
+            &-bordered {
+                @extend .products-item-tags-bordered;
+            }
+            span {
+                display: block;
+                min-width: 60px;
+                text-align: center;
+                padding: 0.25rem 0.5rem;
+            }
+        }
+        margin-top: 1.75rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: .25rem;
+        @media (max-width: $sm) {
+            margin-top: 1.5rem;
+        }
+    }
+    &-button {
+        margin-top: 2rem;
+        @media (max-width: $sm) {
+            margin-top: 1.5rem;
+        }
+    }
+}

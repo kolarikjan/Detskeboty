@@ -22,6 +22,30 @@
         & > a {
             text-decoration: none !important;
         }
+        &-remove {
+            position: absolute;
+            top: .75rem;
+            right: .75rem;
+            @media (max-width: $sm) {
+                top: .3rem;
+                right: .3rem;
+            }
+            svg {
+                fill: var(--highlight-color);
+                width: 2rem;
+            }
+        }
+        &-icons {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            img {
+                max-height: 75px;
+            }
+        }
         &-tags {
             position: absolute;
             display: flex;
@@ -31,7 +55,16 @@
             top: 0;
             left: 0;
             transition: all .25s ease-out;
-            & > * {
+            & > img {
+                max-width: 75px;
+                margin: .75rem 1rem 1rem;
+                @media (max-width: $sm) {
+                    max-width: 55px;
+                    margin: .5rem .75rem .75rem;
+                }
+            }
+            span {
+                display: block;
                 min-width: 60px;
                 text-align: center;
                 padding: .25rem .5rem;
@@ -49,9 +82,22 @@
                 @media (max-width: $sm) {
                     font-size: 11px;
                 }
+                &.green {
+                    border-color: var(--ok-color);
+                    color: var(--ok-color);
+                }
+                &.blue {
+                    border-color: var(--info-color);
+                    color: var(--info-color);
+                }
+                &.red {
+                    border-color: var(--highlight-color);
+                    color: var(--highlight-color);
+                }
             }
             &-colored {
                 &-red {
+                    border: 1px solid var(--highlight-color);
                     font-size: 12px;
                     color: var(--light-color);
                     background-color: var(--highlight-color);
@@ -59,6 +105,27 @@
                     @media (max-width: $sm) {
                         font-size: 11px;
                     }
+                }
+            }
+        }
+        &-badges {
+            @extend .products-item-tags;
+            right: 0;
+            left: unset;
+            & > img {
+                max-width: 55px;
+                margin: .75rem;
+                @media (max-width: $sm) {
+                    max-width: 45px;
+                    margin: .5rem;
+                }
+            }
+            &.large {
+                right: 0rem;
+                top: 3.5rem;
+                & > img {
+                    max-width: 51px;
+                    margin: .25rem .4rem;
                 }
             }
         }
@@ -76,8 +143,19 @@
                 padding: 1.25rem;
             }
         }
+        &-bottomicons {
+            margin-top: .5rem;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: .75rem;
+            img {
+                max-height: 28px;
+            }
+        }
         &-imagebox {
             position: relative;
+            width: 100%;
             img {
                 width: 100%;
                 aspect-ratio: 1/1.1;
@@ -136,71 +214,13 @@
         }
         &-banner {
             &-box {
-                display: block;
-                width: 100%;
-                aspect-ratio: 1/1.2;
                 border-radius: 3px;
                 text-decoration: none !important;
-                &-inner {
-                    padding: 2.5rem;
-                    @media (max-width: $xxl) {
-                        padding: 2rem;
-                    }
-                    @media (max-width: $sm) {
-                        padding: 1.25rem;
-                    }
-                    &.page-output {
-                        h3 {
-                            font-size: 42px;
-                            line-height: 52px;
-                            margin-bottom: 1.5rem;
-                            @media (max-width: $xxl) {
-                                font-size: 28px;
-                                line-height: 38px;
-                                margin-bottom: 1rem;
-                            }
-                            @media (max-width: $sm) {
-                                font-size: 24px;
-                                line-height: 32px;
-                                margin-bottom: .5rem;
-                            }
-                            @media (max-width: 400px) {
-                                font-size: 20px;
-                                line-height: 28px;
-                            }
-                            @media (max-width: 350px) {
-                                font-size: 28px;
-                                line-height: 38px;
-                                margin-bottom: 1rem;
-                            }
-                        }
-                        p {
-                            font-size: 20px;
-                            line-height: 30px;
-                            @media (max-width: $xxl) {
-                                font-size: 16px;
-                                line-height: 26px;
-                            }
-                            @media (max-width: $sm) {
-                                font-size: 15px;
-                                line-height: 25px;
-                            }
-                            @media (max-width: 400px) {
-                                font-size: 14px;
-                                line-height: 24px;
-                            }
-                            @media (max-width: 350px) {
-                                font-size: 16px;
-                                line-height: 26px;
-                            }
-                        }
-                    }
-                }
                 img {
-                    width: 100%;
                     height: 100%;
                     object-fit: cover;
                     border-radius: 3px;
+                    margin: 0 auto;
                 }    
             }
             

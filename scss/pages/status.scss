@@ -4,6 +4,7 @@
             margin: 0 auto;
             width: fit-content;
             max-height: 125px;
+            object-fit: scale-down;
         }
         margin-bottom: 1rem;
     }
@@ -38,6 +39,14 @@
                     fill: var(--secondary-color);
                 }
             }
+        }
+    }
+    &-footer {
+        margin-top: 2.5rem;
+        img {
+            display: block;
+            width: fit-content;
+            margin: 1rem auto 0;
         }
     }
 }

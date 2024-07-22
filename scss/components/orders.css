@@ -1,0 +1,53 @@
+.orders-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.orders-item {
+  background-color: var(--section-color);
+  padding: 3rem;
+}
+.orders-item-top-parameters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.orders-item-top-parameters-item {
+  background-color: var(--light-color);
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+.orders-item-top-parameters-item svg, .orders-item-top-parameters-item img {
+  flex-shrink: 0;
+  width: 24px;
+  aspect-ratio: 1/1;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.orders-item-top-parameters-item p {
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.orders-item-products {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+.orders-item-products a {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  padding: 1.5rem;
+}
+.orders-item-products a img {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}/*# sourceMappingURL=orders.css.map */
