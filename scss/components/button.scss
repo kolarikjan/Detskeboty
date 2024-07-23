@@ -32,8 +32,25 @@
             border: 1px solid var(--highlight-color);
             transition-duration: .25s;
             &:hover {
+                text-decoration: none;
                 background-color: var(--light-color);
                 color: var(--highlight-color);
+            }
+        }
+        &-white {
+            font-size: 14px;
+            line-height: 22px;
+            color: var(--secondary-color);
+            font-weight: 500;
+            background-color: var(--light-color);
+            color: var(--secondary-color);
+            padding: .175rem .5rem;
+            border: 1px solid var(--light-color);
+            transition-duration: .25s;
+            &:hover {
+                text-decoration: none;
+                border-color: var(--secondary-color);
+                color: var(--secondary-color);
             }
         }
     }
