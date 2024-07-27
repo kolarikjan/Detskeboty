@@ -1,4 +1,7 @@
 .page {
+    &-header {
+        background-color: var(--light-color);
+    }
     &-content {
         &-logout {
             position: absolute;

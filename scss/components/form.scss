@@ -165,7 +165,7 @@
         &-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2.5rem 3.5rem;
+            gap: .75rem 3.5rem;
             &-contactform {
                 gap: .75rem 3.5rem;
                 grid-template-columns: 1fr 1.75fr;
@@ -262,6 +262,8 @@
                 }
             }
             &-right {
+                position: relative;
+                z-index: 1;
                 flex: 0 0 auto;
                 width: 75%;
                 @media (max-width: $lg) {

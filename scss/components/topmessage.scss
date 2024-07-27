@@ -5,7 +5,9 @@
     min-height: 57px;
     display: flex;
     align-items: center;
-    display: none;
+    display: flex;
+    overflow: hidden;
+    transition: .3s;
     &-text {
         text-align: center;
         @media (max-width: $md) {
@@ -42,8 +44,10 @@
             }
         }
     }
-    &.active {
-        display: flex;
+    &:not(.active) {
+        max-height: 0 !important;
+        min-height: unset;
+        padding: 0;
     }
     &-close {
         position: absolute;

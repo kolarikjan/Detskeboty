@@ -48,6 +48,9 @@ Author's url: www.kolarikjan.cz
 @import "layout/header";
 @import "layout/footer";
 
+* {
+    scroll-margin-top: 100px;
+}
 ::selection {
     background-color: #e5787c;
     filter: opacity(0.5);
@@ -61,4 +64,10 @@ Author's url: www.kolarikjan.cz
 }
 .text-green {
     color: var(--ok-color);
+}
+body {
+    position: relative;
+}
+#form-createAccount:not(.active) .form-section-dropdown-activator .form-inputbox {
+    margin-bottom: 0;
 }

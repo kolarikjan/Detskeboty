@@ -224,11 +224,11 @@
         }
         &-removeall {
             min-width: 133px;
+            text-align: right;
+            @media (max-width: $md) {
+                text-align: left;
+            }
             p {
-                line-height: 45px !important;
-                @media (max-width: $md) {
-                    line-height: 24px !important;
-                }
                 a {
                     color: var(--menu-color) !important;
                     text-decoration: underline;
