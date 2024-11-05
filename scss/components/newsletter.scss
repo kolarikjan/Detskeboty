@@ -9,6 +9,8 @@
         display: flex;
         justify-content: center;
         gap: .75rem .5rem;
+        position: relative;
+        z-index: 1;
         @media (max-width: $md) {
             margin: 0;
         }

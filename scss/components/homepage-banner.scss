@@ -19,4 +19,91 @@
             }
         }
     }
+    .item {
+        &.extended {
+            background-color: var(--highlight-color);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.25rem 0;
+            height: unset;
+            max-height: unset;
+            @media (max-width: $xl) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        &-imagebox {
+            padding: 2.25rem 2.25rem 0 2.25rem;
+            @media (max-width: $xl) {
+                order: 1;
+                padding-top: 0;
+            }
+            @media (max-width: $sm) {
+                padding: 0 1.5rem;
+            }
+            &-inner {
+                img {
+                    width: 100%;
+                    height: auto;  
+                    aspect-ratio: 1.325/1;
+                    object-fit: cover;
+                }
+            }
+        }
+        &-texts {
+            padding: 0 2.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 1rem;
+            color: var(--light-color);
+            @media (max-width: $xl) {
+                padding: 3rem 2.25rem 0 2.25rem;
+            }
+            @media (max-width: $sm) {
+                padding: 2.25rem 1.5rem 0;
+            }
+        }
+        &-icons {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            img, svg {
+                max-height: 42px;
+                width: auto;
+                object-fit: scale-down;
+            }
+        }
+        &-title {
+            font-size: 36px;
+            line-height: 46px;
+            font-weight: 600;
+            color: var(--light-color);
+            display: block;
+            margin-bottom: .75rem;
+            width: fit-content;
+        }
+        &-desciption {
+            &, p {
+                font-size: 17px;
+                line-height: 28px;
+                margin-bottom: 0;
+                b, strong {  
+                    font-weight: 600;
+                }
+            }
+        }
+        &-button {
+            border-color: var(--light-color) !important;
+            margin-top: 1.25rem;
+            @media (max-width: $xxl) {
+                margin-top: .5rem;
+            }
+            span {  
+                gap: 1.25rem;
+            }
+        }
+    }
 }
